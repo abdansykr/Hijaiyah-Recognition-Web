@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MATERI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Kube CSS -->
+    <link rel="stylesheet" href="css/kube.css" />
+    <link rel="stylesheet" href="css/medajar.css" />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+
+    <script src="js/jquery.js"></script>
+
+    <script>
+      $(window).load(function () {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut("slow");
+      });
+    </script>
+    <style>
+      .materi img {
+        float: left;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body id="index">
+    <div class="se-pre-con"></div>
+
+    <div id="ornamen" class="col col-12 text-center">
+      <img id="awan" src="img/index/awan-menu.gif" alt="" />
+      <!-- <img id="pohon" src="img/index/pohon.png" alt=""> -->
+    </div>
+
+    <div id="materi-page">
+      <button class="button round kontrolAudio" onclick="jeda()">▌▌</button>
+      <button
+        class="button round kontrolAudio"
+        style="display: none"
+        onclick="main()"
+      >
+        ►
+      </button>
+
+      <audio id="backsound" autoplay loop>
+        <source src="snd/backsound_1.ogg" type="audio/ogg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <div class="row">
+        <a href="index.html" id="back"
+          ><img id="back-img" src="img/maps/kembali.png" alt=""
+        /></a>
+      </div>
+      <div class="row">
+        <div class="col col-10 push-middle push-center">
+          <div class="w90 text-center push-center">
+            <nav id="tabs" class="tabs" data-component="tabs">
+              <ul>
+                <li><a href="#tab1">•</a></li>
+                <li><a href="#tab2">•</a></li>
+                <li><a href="#tab3">•</a></li>
+                <li><a href="#tab4">•</a></li>
+              </ul>
+            </nav>
+
+            <div id="materi-show">
+              <div id="tab1">
+                <h1 id="judul-materi">HURUF HIJAIYAH ADALAH</h1>
+                <p class="materi" id="materi1">
+                  Huruf hijaiyah adalah huruf-huruf yang digunakan dalam
+                  penulisan Al-Quran dan bahasa Arab. Huruf ini merupakan dasar
+                  dari pembentukan kata dan kalimat dalam bahasa Arab. Huruf
+                  hijaiyah memiliki aturan terminologi yang berbeda dari abjad
+                  lain, dan ditulis dari kanan ke kiri.<sup>*</sup> Terdapat 30
+                  huruf hijaiyah yang memiliki penulisan dan cara pembacaan yang
+                  berbeda tergantung pada harakat dan tajwid.
+                  <br />
+                  <audio class="narasi" id="narasi1" preload="none">
+                    <source src="voice/narasi1_ok.ogg" type="audio/ogg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                  <span class="smaller">
+                    * Sumber:
+                    <i>Arti huruf hijaiyah, Kumparan.com</i>
+                  </span>
+                </p>
+              </div>
+              <div id="tab2">
+                <h1 id="judul-materi">PENULISAN HURUF HIJAIYAH</h1>
+                <p class="materi">
+                  <img
+                    class="w30"
+                    src="img/materi/yok.png"
+                    alt="peta_letageo"
+                  />
+                  Huruf hijaiyah memiliki perbedaan antara huruf yang dapat
+                  disambung dengan huruf sebelum atau sesudahnya, dan huruf yang
+                  tidak dapat disambung dengan huruf sesudahnya. Huruf hijaiyah
+                  yang dapat disambung memiliki fleksibilitas dalam
+                  penulisannya, sedangkan huruf hijaiyah yang tidak dapat
+                  disambung tetap bisa disambung dengan huruf sebelumnya. <br />
+                  <br />
+                  <audio class="narasi" id="narasi2" preload="none">
+                    <source src="voice/narasi2.ogg" type="audio/ogg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </p>
+              </div>
+              <div id="tab3">
+                <h1 id="judul-materi">TANDA BACA HIJAIYAH</h1>
+                <p class="materi">
+                  Tanda baca huruf hijaiyah memegang peran penting dalam
+                  mempermudah pembacaan Al-Qur'an. Tanda-tanda ini memberikan
+                  petunjuk yang jelas mengenai pelafalan dan pengucapan yang
+                  benar untuk setiap huruf hijaiyah. Tanda baca huruf hijaiyah
+                  disebut juga dengan istilah harakat
+                  <br />
+                  <audio class="narasi" id="narasi4" preload="none">
+                    <source src="voice/narasi4.ogg" type="audio/ogg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                  <span class="smaller">
+                    Sumber:
+                    <br />
+                    <i
+                      ><a
+                        href=" https://www.liputan6.com/lifestyle/read/4967910/tanda-baca-huruf-hijaiyah-disebut-ada-tujuh-simak-penjelasannya"
+                        >https://www.liputan6.com/lifestyle/read/4967910/tanda-baca-huruf-hijaiyah-disebut-ada-tujuh-simak-penjelasannya</a
+                      ></i
+                    >
+                  </span>
+                </p>
+              </div>
+              <div id="tab4">
+                <h1 id="judul-materi">TANDA BACA HURUF</h1>
+                <p class="materi">
+                  <img src="img/materi/tandabaca.png" alt="" class="w50" />
+                  Dengan memahami tanda baca huruf hijaiyah ini, umat Islam
+                  dapat membaca Al-Qur'an dengan lafal yang benar dan memahami
+                  makna ayat-ayatnya dengan lebih baik <br />
+                  <audio class="narasi" id="narasi5" preload="none">
+                    <source src="voice/narasi5.ogg" type="audio/ogg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </p>
+              </div>
+            </div>
+            <!-- <legend>Menu Utama</legend> -->
+            <a role="button" id="pre"
+              ><img id="pre-img" src="img/materi/pre.png"
+            /></a>
+            <a role="button" id="nex"
+              ><img id="nex-img" src="img/materi/next.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Kube JS + jQuery are used for some functionality, but are not required for the basic setup -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+    <script src="js/kube.js"></script>
+
+    <script>
+      function cekPosisi() {
+        if ($("#tab1").hasClass("open")) {
+          $("#narasi2,#narasi3,#narasi4,#narasi5,#narasi6")
+            .trigger("pause")
+            .prop("currentTime", 0);
+          $("#narasi1").trigger("play");
+        }
+        if ($("#tab2").hasClass("open")) {
+          $("#narasi1,#narasi3,#narasi4,#narasi5,#narasi6")
+            .trigger("pause")
+            .prop("currentTime", 0);
+          $("#narasi2").trigger("play");
+        }
+        if ($("#tab3").hasClass("open")) {
+          $("#narasi1,#narasi2,#narasi4,#narasi5,#narasi6")
+            .trigger("pause")
+            .prop("currentTime", 0);
+          $("#narasi3").trigger("play");
+        }
+        if ($("#tab4").hasClass("open")) {
+          $("#narasi1,#narasi2,#narasi3,#narasi5,#narasi6")
+            .trigger("pause")
+            .prop("currentTime", 0);
+          $("#narasi4").trigger("play");
+        }
+        if ($("#tab5").hasClass("open")) {
+          $("#narasi1,#narasi2,#narasi3,#narasi4,#narasi6")
+            .trigger("pause")
+            .prop("currentTime", 0);
+          $("#narasi5").trigger("play");
+        }
+        if ($("#tab6").hasClass("open")) {
+          $("#narasi1,#narasi2,#narasi3,#narasi4,#narasi5")
+            .trigger("pause")
+            .prop("currentTime", 0);
+          $("#narasi6").trigger("play");
+        }
+      }
+      $(window).load(function () {
+        cekPosisi();
+      });
+      $(document).ready(function () {
+        $("#materi-show").animation("zoomIn");
+      });
+      $("#back").hover(
+        function () {
+          $("#back-img").attr("src", "img/maps/kembali_hover.png");
+        },
+        function () {
+          $("#back-img").attr("src", "img/maps/kembali.png");
+        }
+      );
+      $("#pre").click(function () {
+        $("#tabs").tabs("prev");
+        $(".materi").animation("flipIn");
+        cekPosisi();
+      });
+      $("#nex").click(function () {
+        $("#tabs").tabs("next");
+        $(".materi").animation("flipIn");
+        cekPosisi();
+      });
+      $("#pre").hover(
+        function () {
+          $("#pre-img").attr("src", "img/materi/pre_hover.png");
+        },
+        function () {
+          $("#pre-img").attr("src", "img/materi/pre.png");
+        }
+      );
+      $("#nex").hover(
+        function () {
+          $("#nex-img").attr("src", "img/materi/next_hover.png");
+        },
+        function () {
+          $("#nex-img").attr("src", "img/materi/next.png");
+        }
+      );
+      $("#peta_waktu").hover(
+        function () {
+          $("#peta_waktu-img").attr(
+            "src",
+            "img/index/menu_peta_waktu_hover.png"
+          );
+        },
+        function () {
+          $("#peta_waktu-img").attr("src", "img/index/menu_peta_waktu.png");
+        }
+      );
+      $("a,button").click(function () {
+        new Audio("snd/Click.ogg").play();
+      });
+      $("a,button").mouseover(function () {
+        new Audio("snd/hover.ogg").play();
+      });
+      function jeda() {
+        document.getElementById("backsound").pause();
+      }
+      function main() {
+        document.getElementById("backsound").play();
+      }
+      $(".kontrolAudio").click(function () {
+        $(".kontrolAudio").fadeToggle();
+      });
+      $("#tabs").click(function () {
+        cekPosisi();
+      });
+      document.getElementById("backsound").volume = 0.2;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KOMPETENSI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Kube CSS -->
+    <link rel="stylesheet" href="css/kube.css" />
+    <link rel="stylesheet" href="css/medajar.css" />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+
+    <script src="js/jquery.js"></script>
+
+    <script>
+      $(window).load(function () {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut("slow");
+      });
+    </script>
+    <style>
+      nav ul li a {
+        font-family: Boogaloo-Regular;
+      }
+      #kompetensi-show .kompetensi {
+        font-size: 3em;
+      }
+    </style>
+  </head>
+  <body id="index">
+    <div class="se-pre-con"></div>
+
+    <div id="ornamen" class="col col-12 text-center">
+      <img id="awan" src="img/index/awan-menu.gif" alt="" />
+      <!-- <img id="pohon" src="img/index/pohon.png" alt=""> -->
+    </div>
+
+    <div id="materi-page">
+      <button class="button round kontrolAudio" onclick="jeda()">▌▌</button>
+      <button
+        class="button round kontrolAudio"
+        style="display: none"
+        onclick="main()"
+      >
+        ►
+      </button>
+
+      <audio id="backsound" autoplay loop>
+        <source src="snd/backsound_1.ogg" type="audio/ogg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <div class="row">
+        <a href="index.html" id="back"
+          ><img id="back-img" src="img/maps/kembali.png" alt=""
+        /></a>
+      </div>
+      <div class="row">
+        <div class="col col-10 push-middle push-center">
+          <div class="w90 push-center">
+            <nav
+              id="tabs"
+              class="tabs"
+              style="margin: 5% 5% 0 5%"
+              data-component="tabs"
+            >
+              <ul>
+                <li><a href="#tab1">STANDAR KOMPETENSI</a></li>
+                <li><a href="#tab2">KOMPETENSI DASAR</a></li>
+                <li><a href="#tab3">INDIKATOR</a></li>
+                <li><a href="#tab4">TUJUAN PEMBELAJARAN</a></li>
+              </ul>
+            </nav>
+
+            <div id="kompetensi-show" style="margin-top: 0">
+              <div id="tab1">
+                <h1 id="judul-kompetensi">STANDAR KOMPETENSI</h1>
+                <p class="kompetensi" id="kompetensi1">
+                  <!-- <ol>
+								 	<li class="komp">1. MEMAHAMI PENTINGNYA KEUTUHAN NEGARA KESATUAN REPUBLIK INDONESIA</li>
+								 </ol>  -->
+                  1. Mengenal dan memahami huruf hijaiyah serta tanda bacanya
+                </p>
+              </div>
+              <div id="tab2">
+                <h1 id="judul-kompetensi">KOMPETENSI DASAR</h1>
+                <p class="kompetensi">
+                  <!-- <ol>
+									<li>
+										<ol class="komp">
+											<li class="komp">Mendeskripsikan Negara Kesatuan Republik Indonesia</li>
+										</ol>
+									</li>
+								</ol> -->
+                  1.1 Mengidentifikasi dan membedakan huruf hijaiyah dan tanda
+                  bacanya
+                </p>
+              </div>
+              <div id="tab3">
+                <h1 id="judul-kompetensi">INDIKATOR</h1>
+                <p class="kompetensi">
+                  <!-- <ol>
+									<li>
+										<ol>
+											<li>
+												<ol class="komp">
+													<li class="komp">Menunjukkan letak wilayah NKRI</li>
+													<li class="komp">Mengidentifikasi wilayah-wilayah NKRI</li>
+													<li class="komp">Menunjukkan batas-batas wilayah NKRI</li>
+													<li class="komp">Menjelaskan pembagian waktu di Indonesia</li>
+												</ol>
+											</li>
+										</ol>
+									</li>
+								</ol> -->
+                  1. Mengucapkan dan menulis huruf hijaiyah dengan benar<br />
+                  2. Mengidentifikasi tanda baca Fathah, Kasrah, dan Dhommah
+                  pada huruf hijaiyah <br />
+                </p>
+              </div>
+              <div id="tab4">
+                <h1 id="judul-kompetensi">TUJUAN PEMBELAJARAN</h1>
+                <p class="kompetensi" style="font-size: 1.7em">
+                  <!-- <ol type="A">
+									<li>Dengan mengamati peta letak Indonesia siswa dapat menunjukkan letak wilayah NKRI dengan tepat</li>
+									<li>Dengan bermain tebak wilayah siswa dapat mengidentifikasi wilayah NKRI minimal 4 wilayah</li>
+									<li>Dengan mengamati peta batas wilayah siswa dapat menunjukkan batas wilayah NKRI minimal 1 wilayah</li>
+									<li>Dengan mengamati peta pembagian waktu siswa dapat menjelaskan pembagian waktu di Indonesia dengan benar</li>
+								</ol> -->
+                  A. Memahami dan mengenal huruf hijaiyah serta tanda bacanya
+                  <br />
+                  B. Mampu melafalkan dan menulis huruf hijaiyah dengan benar
+                  <br />
+                  C. Mampu membaca dan menulis kata-kata sederhana menggunakan
+                  huruf hijaiyah <br />
+                </p>
+              </div>
+            </div>
+            <!-- <legend>Menu Utama</legend> -->
+            <span class="text-center w100" style="display: block">
+              <a role="button" id="pre"
+                ><img id="pre-img" src="img/materi/pre.png"
+              /></a>
+              <a role="button" id="nex"
+                ><img id="nex-img" src="img/materi/next.png"
+              /></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Kube JS + jQuery are used for some functionality, but are not required for the basic setup -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+    <script src="js/kube.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#kompetensi-show").animation("zoomIn");
+      });
+      $("#back").hover(
+        function () {
+          $("#back-img").attr("src", "img/maps/kembali_hover.png");
+        },
+        function () {
+          $("#back-img").attr("src", "img/maps/kembali.png");
+        }
+      );
+      $("#pre").click(function () {
+        $("#tabs").tabs("prev");
+        $(".kompetensi").animation("flipIn");
+      });
+      $("#nex").click(function () {
+        $("#tabs").tabs("next");
+        $(".kompetensi").animation("flipIn");
+      });
+      $("#pre").hover(
+        function () {
+          $("#pre-img").attr("src", "img/materi/pre_hover.png");
+        },
+        function () {
+          $("#pre-img").attr("src", "img/materi/pre.png");
+        }
+      );
+      $("#nex").hover(
+        function () {
+          $("#nex-img").attr("src", "img/materi/next_hover.png");
+        },
+        function () {
+          $("#nex-img").attr("src", "img/materi/next.png");
+        }
+      );
+      $("a,button").click(function () {
+        new Audio("snd/Click.ogg").play();
+      });
+      $("a,button").mouseover(function () {
+        new Audio("snd/hover.ogg").play();
+      });
+      function jeda() {
+        document.getElementById("backsound").pause();
+      }
+      function main() {
+        document.getElementById("backsound").play();
+      }
+      $(".kontrolAudio").click(function () {
+        $(".kontrolAudio").fadeToggle();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MENU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Kube CSS -->
+    <link rel="stylesheet" href="css/kube.css" />
+    <link rel="stylesheet" href="css/medajar.css" />
+
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+
+    <script src="js/jquery.js"></script>
+
+    <script>
+      $(window).load(function () {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut("slow");
+      });
+    </script>
+
+    <style></style>
+  </head>
+  <body id="index">
+    <div class="se-pre-con"></div>
+
+    <div id="ornamen" class="col col-12 text-center">
+      <img id="awan" src="img/index/awan-menu.gif" alt="" />
+      <!-- <img id="pohon" src="img/index/pohon.png" alt=""> -->
+    </div>
+
+    <div id="main">
+      <button class="button round kontrolAudio" onclick="jeda()">▌▌</button>
+      <button
+        class="button round kontrolAudio"
+        style="display: none"
+        onclick="main()"
+      >
+        ►
+      </button>
+
+      <audio id="backsound" autoplay loop>
+        <source src="snd/backsound_1.ogg" type="audio/ogg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <div class="show-sm">
+        <a id="sm-toggle" href="#">
+          <!-- <a id="sm-toggle" href="#" data-component="toggleme" data-target="#menu-sm"> -->
+          <img class="tbl-menu" src="img/m_1.png" alt="" />
+          <img
+            class="tbl-menu"
+            style="display: none"
+            src="img/m_2.png"
+            alt=""
+          />
+        </a>
+      </div>
+
+      <div id="menu-sm" class="text-center">
+        <ul>
+          <li>
+            <a href="#" onclick="$.modalwindow({target:'#mod_setting'});"
+              >Pengaturan</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="$.modalwindow({target:'#mod_about'});"
+              >Tentang</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <img src="img/index/logono.png" id="judul" alt="virtual map" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-6 push-middle push-center text-center" id="menu">
+          <div>
+            <img src="img/index/bg_menu_head.png" alt="" class="w70" />
+          </div>
+          <div class="w70 text-center push-center">
+            <!-- <legend>Menu Utama</legend> -->
+            <div>
+              <a href="kompetensi.html" role="button"
+                ><img
+                  id="kompetensi-img"
+                  src="img/index/menu_kompetensi.png"
+                  alt=""
+              /></a>
+            </div>
+            <div>
+              <a href="materi.html" role="button"
+                ><img id="materi-img" src="img/index/menu_materi.png" alt=""
+              /></a>
+            </div>
+            <div>
+              <!-- <a href="" class="button large">pentingnya persatuan dan kesatuan NKRI</a> -->
+              <a id="kuis" href="kuis.php" role="button"
+                ><img id="kuis-img" src="img/index/menu_kuis.png" alt=""
+              /></a>
+            </div>
+            <div class="row between hide-sm">
+              <a
+                href="#"
+                id="pgt"
+                class="w30"
+                onclick="$.modalwindow({target:'#mod_setting'});"
+                ><img id="pgt-img" src="img/index/setting.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Peta -->
+
+      <!-- Modal Settings -->
+      <div id="mod_setting" class="modal-box hide">
+        <div class="modal">
+          <span class="close"></span>
+          <div class="modal-header">Pengaturan</div>
+          <div class="modal-body">
+            <a
+              href="admin.php"
+              class="small button round outline secondary text-center"
+              role="button"
+              >Admin</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Kube JS + jQuery are used for some functionality, but are not required for the basic setup -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+    <script src="js/kube.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#judul").animation("flipIn");
+        $("#menu").animation("zoomIn");
+      });
+      $("#menu-sm").hide();
+      $("#pgt").hover(
+        function () {
+          $("#pgt-img").attr("src", "img/index/setting_hover.png");
+        },
+        function () {
+          $("#pgt-img").attr("src", "img/index/setting.png");
+        }
+      );
+      $("#abt").hover(
+        function () {
+          $("#abt-img").attr("src", "img/index/about_hover_.png");
+        },
+        function () {
+          $("#abt-img").attr("src", "img/index/about.png");
+        }
+      );
+      $("a[href='kuis.php']").hover(
+        function () {
+          $("#kuis-img").attr("src", "img/index/menu_kuis_hover.png");
+        },
+        function () {
+          $("#kuis-img").attr("src", "img/index/menu_kuis.png");
+        }
+      );
+      $("a[href='kompetensi.html']").hover(
+        function () {
+          $("#kompetensi-img").attr(
+            "src",
+            "img/index/menu_kompetensi_hover.png"
+          );
+        },
+        function () {
+          $("#kompetensi-img").attr("src", "img/index/menu_kompetensi.png");
+        }
+      );
+      $("a[href='maps.php']").hover(
+        function () {
+          $("#peta-img").attr("src", "img/index/menu_peta_hover.png");
+        },
+        function () {
+          $("#peta-img").attr("src", "img/index/menu_peta.png");
+        }
+      );
+      $("a[href='maps_waktu.php']").hover(
+        function () {
+          $("#peta_waktu-img").attr(
+            "src",
+            "img/index/menu_peta_waktu_hover.png"
+          );
+        },
+        function () {
+          $("#peta_waktu-img").attr("src", "img/index/menu_peta_waktu.png");
+        }
+      );
+      $("a[href='materi.html']").hover(
+        function () {
+          $("#materi-img").attr("src", "img/index/menu_materi_hover.png");
+        },
+        function () {
+          $("#materi-img").attr("src", "img/index/menu_materi.png");
+        }
+      );
+      $("#peta_aja").hover(
+        function () {
+          $("#peta_aja-img").attr("src", "img/index/menu_peta_aja_hover.png");
+        },
+        function () {
+          $("#peta_aja-img").attr("src", "img/index/menu_peta_aja.png");
+        }
+      );
+      $("a[href='tebak_pulau.php']").hover(
+        function () {
+          $("#peta_buta-img").attr("src", "img/index/menu_peta_buta_hover.png");
+        },
+        function () {
+          $("#peta_buta-img").attr("src", "img/index/menu_peta_buta.png");
+        }
+      );
+      $("#sm-toggle").click(function () {
+        $(".tbl-menu").fadeToggle();
+        $("#menu-sm").slideToggle();
+      });
+      $("a,button").click(function () {
+        new Audio("snd/Click.ogg").play();
+      });
+      $("a,button").mouseover(function () {
+        new Audio("snd/hover.ogg").play();
+      });
+      function jeda() {
+        document.getElementById("backsound").pause();
+      }
+      function main() {
+        document.getElementById("backsound").play();
+      }
+      $(".kontrolAudio").click(function () {
+        $(".kontrolAudio").fadeToggle();
+      });
+    </script>
+  </body>
+</html>
